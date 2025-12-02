@@ -3,7 +3,7 @@ from app.states.xtream_state import XtreamState
 
 
 def navbar_link(text: str, href: str) -> rx.Component:
-    is_active = rx.State.router.page.path == href
+    is_active = XtreamState.router.page.path == href
     return rx.el.li(
         rx.el.a(
             text,
